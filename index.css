@@ -7,15 +7,43 @@
     font-family: 'Poppins' , sans-serif;
     box-sizing: border-box;
 }
+/* 
+#background-video {
 
-.container{
+    position: fixed;
+    
+    right: 0;
+    bottom: 0;
+
+    width: auto;
+    height: auto;
+    z-index: -100;
+  
+    background-size: cover;
+} */
+/* .container {
     width: 100%;
-   min-height:  100vh;
-   /* background:linear-gradient(130deg , #520260 ,#210101); */
-   background-image: url('https://i.redd.it/jlpv3gf20c291.png');
-   background-size: cover;
-   padding: 10px;
+    height: 100vh;
+    background-size: 400% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(18% 28% at 24% 50%, #CEFAFF00 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, rgb(92, 6, 132) 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, rgb(125, 93, 19) 24%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #BA1CCCE3 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #8E12AFF5 24%, #073AFF00 100%),linear-gradient(125deg, rgb(140, 100, 6) 1%, rgb(53, 0, 178) 100%);
+    padding: 10px;
+    animation: linearGradient ease-out 10s infinite; 
 }
+
+@keyframes linearGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+
 /* .todoapp{
     width: 100%;
     max-width: 540px;
@@ -78,6 +106,7 @@ button{
     font-size: 14px;
     cursor: pointer;
     border-radius: 15px;
+    margin-bottom: 20px;
 }
 
 ul li{
@@ -129,24 +158,65 @@ ul li span{
 ul li span:hover{
     background: hsl(0, 99%, 51%);
 }
-/* 
- h1{
-    position:relative;
-    top: -40px;
-    right: 30px;
-    pointer-events: none;
-    font: size 12em;
-    color: #a29f9f28;
-  font-family: "Outfit", sans-serif;
-}
-.date-container{
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    padding-left: 10px;
-    padding-top: 10px;
 
-} */
+@keyframes rotate {
+    0% {
+   transform: rotate(0deg);
+}
+100% {
+   transform: rotate(360deg);
+}
+}
+.out-top {
+animation: rotate 20s linear infinite;
+transform-origin: 13px 25px;
+}
+.in-top {
+animation: rotate 10s linear infinite;
+transform-origin: 13px 25px;
+}
+.out-bottom {
+animation: rotate 25s linear infinite;
+transform-origin: 84px 93px;
+}
+.in-bottom {
+animation: rotate 15s linear infinite;
+transform-origin: 84px 93px;
+}
+body {
+    background-color: #ffc30dc2;
+}
+svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.links {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 1em;
+}
+a:hover {
+    text-decoration: underline;
+}
+a img.icon {
+    display: inline-block;
+    height: 1em;
+    margin: 0 0 -0.1em 0.3em;
+}
+
+
 .todoapp{
     position: relative; 
     width: 100%;
@@ -169,11 +239,12 @@ ul li span:hover{
 .todoapp h1 {
     
     font-size: 5em; 
-    color: rgba(255, 255, 255, 0.055); 
+    color: rgba(255, 255, 255, 0.23); 
     pointer-events: none;
     z-index: -1;
     font-family: "Outfit", sans-serif;
     margin-top:248px;
+    text-shadow: #0000;
    
 }
 
@@ -187,3 +258,11 @@ ul li span:hover{
         -ms-user-select: none; 
         user-select: none; 
       }
+
+
+      @media screen and (min-width: 992px) {
+       
+        .todoapp {
+            max-width: 1000px; 
+        }
+    }
