@@ -106,7 +106,11 @@ button{
     font-size: 14px;
     cursor: pointer;
     border-radius: 15px;
+<<<<<<< HEAD
     margin-bottom: 20px;
+=======
+    margin-bottom:20px;
+>>>>>>> bfa395e455b935afcced86ab1f14e05abc04ef44
 }
 
 ul li{
@@ -258,6 +262,7 @@ a img.icon {
         -ms-user-select: none; 
         user-select: none; 
       }
+<<<<<<< HEAD
 
 
       @media screen and (min-width: 992px) {
@@ -266,3 +271,5 @@ a img.icon {
             max-width: 1000px; 
         }
     }
+=======
+>>>>>>> bfa395e455b935afcced86ab1f14e05abc04ef44
